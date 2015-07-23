@@ -1,0 +1,11 @@
+{
+  "name"        : "demo-app",
+  "version"     : "0.0.1",
+  "description" : "Just a demo app with all frontend thinks",
+  "author"      : "Rodrigo Otavio van den Berg Maia <rodrigovdb@gmail.com>",
+  "license"     : "MIT",
+  "dependencies"  : {
+    "jquery"        : "^2.1.3",
+    "font-awesome"  : "^4.3.0"
+  }
+}
