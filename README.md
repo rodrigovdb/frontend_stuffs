@@ -13,3 +13,4 @@ $ nvm install 0.12
 * Jade
 * Angular
 * NPM
+* Gulp
