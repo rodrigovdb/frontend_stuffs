@@ -26,3 +26,6 @@ $ npm install
 
 * Angular
 * Yo (yeomen)
+
+* Bower things
+  * font-awesome
