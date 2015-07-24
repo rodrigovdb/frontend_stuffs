@@ -41,11 +41,8 @@ gulp.task('compile', ['sass', 'coffee', 'jade']);
 
 gulp.task('server', function () {
   browserSync({
-    files: ['./build/js/*.js', './build/css/*.css', './build/img/*', './build/*.html'],
-    port: 8080,
-    server: {
-      baseDir: './build'
-    }
+    files   : ['./build/js/*.js', './build/css/*.css', './build/img/*', './build/*.html'],
+    server  : { baseDir : './build' }
   });
 });
 
