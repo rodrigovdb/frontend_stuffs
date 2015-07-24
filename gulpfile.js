@@ -1,9 +1,11 @@
 'use strict';
 
-var gulp    = require('gulp'),
-    sass    = require('gulp-sass'),
-    gutil   = require('gulp-util'),
-    coffee  = require('gulp-coffee');
+var gulp        = require('gulp'),
+    sass        = require('gulp-sass'),
+    gutil       = require('gulp-util'),
+    coffee      = require('gulp-coffee'),
+    jade        = require('gulp-jade'),
+    browserSync = require('browser-sync');
 
 var paths = {
   jquery            : './node_modules/jquery/dist/jquery.min.js',
@@ -11,27 +13,46 @@ var paths = {
   fontawesome_font  : './node_modules/font-awesome/fonts/*',
 
   sass              : './src/sass/*.scss',
-  coffee            : './src/coffee/*.coffee'
+  coffee            : './src/coffee/*.coffee',
+  jade              : './src/jade/*.jade'
 }
 
 gulp.task('sass', function() {
-    gulp.src([
-          paths.sass,
-          paths.fontawesome_css
-        ])
+    gulp.src(paths.sass)
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('./src/css/'));
+        .pipe(gulp.dest('./build/css/'));
 });
 
 gulp.task('coffee', function() {
-  gulp.src('./src/coffee/*.coffee')
+  gulp.src(paths.coffee)
       .pipe(coffee({bare: true}).on('error', gutil.log))
-      .pipe(gulp.dest('./src/js/'))
+      .pipe(gulp.dest('./build/js/'))
 });
 
-gulp.task('compile', ['sass', 'coffee']);
+gulp.task('jade', function() {
+  var YOUR_LOCALS = {};
 
-gulp.task('default', function(){
+  gulp.src(paths.jade)
+      .pipe(jade({ locals: YOUR_LOCALS }))
+      .pipe(gulp.dest('./build/'))
+});
+
+gulp.task('compile', ['sass', 'coffee', 'jade']);
+
+gulp.task('server', function () {
+  browserSync({
+    files: ['./build/js/*.js', './build/css/*.css', './build/img/*', './build/*.html'],
+    port: 8080,
+    server: {
+      baseDir: './build'
+    }
+  });
+});
+
+gulp.task('watch', function(){
   gulp.watch(paths.sass,    ['sass']);
   gulp.watch(paths.coffee,  ['coffee']);
+  gulp.watch(paths.jade,    ['jade']);
 });
+
+gulp.task('default', ['compile', 'server', 'watch']);

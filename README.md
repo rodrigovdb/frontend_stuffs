@@ -24,7 +24,5 @@ $ npm install
 
 # TODO:
 
-* Jade
 * Angular
-* Bower
 * Yo (yeomen)

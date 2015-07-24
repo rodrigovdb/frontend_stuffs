@@ -1,6 +1,7 @@
 .vagrant/
 node_modules/
 src/components/
+build/
 .sass-cache/
 .idea/
 .tmp/
