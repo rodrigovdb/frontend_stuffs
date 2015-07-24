@@ -1,1 +1,3 @@
-alert('oi');
+$(document).ready(function() {
+  return alert('oi');
+});

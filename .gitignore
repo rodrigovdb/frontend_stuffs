@@ -1,6 +1,6 @@
 .vagrant/
 node_modules/
-bower_components/
+src/components/
 .sass-cache/
 .idea/
 .tmp/
