@@ -1,3 +1,12 @@
+# WTF is this?
+A collection of good stuffs to frontend.
+
+* [SASS](http://sass-lang.com/)
+* [CoffeeScript](http://coffeescript.org/)
+* [Jade](http://jade-lang.com/)
+
+managed with [gulp](http://gulpjs.com/)
+
 # System dependencies
 
 ## Node JS (via NPM)
@@ -26,6 +35,11 @@ $ npm install
 
 * Angular
 * Yo (yeomen)
+* GH Pages
 
 * Bower things
   * font-awesome
+
+# Thanks
+
+Thank you very much [@pedromartos](https://github.com/pedromartos)
