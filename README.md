@@ -13,7 +13,7 @@ $ nvm install 0.12
 Add dependencies to environment
 
 ```
-$ npm install -g bower gulp http-server yo
+$ npm install -g bower gulp http-server yo coffee-script gulp-util
 ```
 
 or just add dependencies to project
@@ -24,7 +24,6 @@ $ npm install
 
 # TODO:
 
-* CoffeeScript
 * Jade
 * Angular
 * Bower
