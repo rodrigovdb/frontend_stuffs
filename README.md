@@ -31,6 +31,11 @@ or just add dependencies to project
 $ npm install
 ```
 
+# How do I use it?
+
+1. Write your code into src (src/sass to sass, src/coffee to coffeescript etc.)
+2. Compile, watch and serve it with $ gulp
+
 # TODO:
 
 * Angular
