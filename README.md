@@ -24,7 +24,6 @@ $ npm install
 
 # TODO:
 
-* SASS
 * CoffeeScript
 * Jade
 * Angular
